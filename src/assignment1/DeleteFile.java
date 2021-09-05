@@ -5,8 +5,8 @@ import java.nio.file.Files;
 import java.nio.file.NoSuchFileException;
 import java.nio.file.Paths;
 
-class DeleteFile {
-	
+public class DeleteFile {
+
 	protected static void delete(String fileName) throws IOException {
 		boolean out = false;
 		try {	

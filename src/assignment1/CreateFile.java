@@ -4,15 +4,24 @@ import java.util.Scanner;
 import java.io.FileWriter;
 import java.io.IOException;
 
-class CreateFile {
+public class CreateFile {
 	
 	protected static boolean create(String fileName) {
 		Scanner sc=new Scanner(System.in);
 			
 		try {
 			File f=new File(fileName);
-			if(!f.exists())
+			if(f.exists())
 			{
+				
+				System.out.println("File already exists");
+				return false;
+				
+				
+				
+			}
+			else {
+				
 				f.createNewFile();
 				System.out.println("File successfully created ");
 				FileWriter fi=new FileWriter(f);
@@ -25,9 +34,6 @@ class CreateFile {
 				return true;
 				
 			}
-			else {
-				return false;
-			}
 			
 			
 		}
@@ -37,7 +43,7 @@ class CreateFile {
 			return false;
 		}
 		
-		
+	
 		
 	}
 	
