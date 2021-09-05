@@ -14,7 +14,7 @@ public class Main {
 		
 		int userInput=0;
 		
-		Program fileObject = new Program();
+		FileManager fileObject = new Program();
 		
 		
 		
