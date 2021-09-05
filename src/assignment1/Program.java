@@ -53,7 +53,7 @@ public class Program implements FileManager{
 		
 	}
 
-	protected static void writeToFile(File f) throws IOException {
+	private static void writeToFile(File f) throws IOException {
 		
 		
 		BufferedReader rd = new BufferedReader(new InputStreamReader(System.in));
