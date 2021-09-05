@@ -8,6 +8,7 @@ class CreateFile {
 	
 	protected static boolean create(String fileName) {
 		Scanner sc=new Scanner(System.in);
+			
 		try {
 			File f=new File(fileName);
 			if(!f.exists())
