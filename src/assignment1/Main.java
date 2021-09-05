@@ -13,6 +13,11 @@ public class Main {
 		System.out.println("Developed by Piyush Pranjal");
 		
 		int userInput=0;
+		
+		Program fileObject = new Program();
+		
+		
+		
 		while(userInput!=3)
 		{
 			System.out.println("Enter 1 for listing Files");
@@ -25,8 +30,9 @@ public class Main {
 			{
 				if(userInput ==1)
 				{
-					ListFile.list();
-						
+					
+					fileObject.listFiles();
+											
 				}
 				
 				else if(userInput ==2){
@@ -41,21 +47,21 @@ public class Main {
 					{
 						System.out.println("Enter File name");
 						String fileName=sc.next();
-						CreateFile.create(fileName);
+						fileObject.createFile(fileName);
 						
 					}
 					else if(userInputForFile==2)
 					{	
 						System.out.println("Enter the file name to be searched");
 						String fileName = sc.next();
-						SearchFile.search(fileName);
+						fileObject.searchFile(fileName);
 						
 					}
 					else if(userInputForFile == 3){
 						
 						System.out.println("Enter File name to delete");
 						String fileName = sc.next();
-						DeleteFile.delete(fileName);
+						fileObject.deleteFile(fileName);
 							
 					}
 					
@@ -86,7 +92,9 @@ public class Main {
 			
 		}
 		
-	
+		sc.close();
+		
+		
 
 	}
 
